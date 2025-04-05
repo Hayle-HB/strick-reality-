@@ -4,47 +4,31 @@ const fs = require("fs");
 const SVGtoPDF = require("svg-to-pdfkit");
 
 class PDFGenerator {
-  static generatePaymentConfirmation(
-    res,
-    inputData = {},
-    invoiceNumber = "20126186"
-  ) {
-    // Default data structure
-    const data = {
-      customerName: inputData.customerName || "John Smith",
-      items: inputData.items || [
-        {
-          description: "Property Management Services",
-          cost: 1500.0,
-        },
-        {
-          description: "Maintenance and Repairs",
-          cost: 750.0,
-        },
-        {
-          description: "Maintenance and Repairs",
-          cost: 750.0,
-        },
-        {
-          description: "Maintenance and Repairs",
-          cost: 750.0,
-        },
-        {
-          description: "Maintenance and Repairs",
-          cost: 750.0,
-        },
-        {
-          description: "Marketing and Advertising",
-          cost: 500.0,
-        },
-      ],
-      amountPaid: inputData.amountPaid || 2750.0,
-      grossAmount: inputData.grossAmount || 2750.0,
-      managementFee: inputData.managementFee || 275.0,
-      totalAmount: inputData.totalAmount || 3025.0,
-    };
-
+  static generatePaymentConfirmation(req, res) {
     try {
+      // Read the invoice tracker file
+      const trackerPath = path.join(
+        __dirname,
+        "../public/invoide_tracker.json"
+      );
+      let trackerData = JSON.parse(fs.readFileSync(trackerPath, "utf8"));
+
+      // Get last invoice number and increment it
+      const lastInvoice = trackerData[trackerData.length - 1];
+      const nextInvoiceNumber = (
+        parseInt(lastInvoice.invoiceNumber) + 1
+      ).toString();
+
+      // Create new invoice data
+      const newInvoiceData = {
+        ...req.body,
+        invoiceNumber: nextInvoiceNumber,
+        paymentDate: new Date().toISOString().split("T")[0],
+      };
+
+      // Add to tracker
+      trackerData.push(newInvoiceData);
+
       // Create a new PDF document
       const doc = new PDFDocument({
         size: "A4",
@@ -53,17 +37,20 @@ class PDFGenerator {
 
       // Set response headers
       res.setHeader("Content-Type", "application/pdf");
-      res.setHeader("Content-Disposition", "attachment; filename=invoice.pdf");
+      res.setHeader("Content-Disposition", "inline; filename=invoice.pdf");
 
       // Pipe the PDF to the response
       doc.pipe(res);
 
-      // Add content to the PDF
-      this.addHeader(doc, invoiceNumber);
-      this.addBillingInfo(doc, data);
-      this.addItemsTableWithSummary(doc, data);
+      // Add content to the PDF using request body data and new invoice number
+      this.addHeader(doc, nextInvoiceNumber);
+      this.addBillingInfo(doc, req.body);
+      this.addItemsTableWithSummary(doc, req.body);
       this.addPaymentMethod(doc);
       this.addFooter(doc);
+
+      // Save updated tracker data
+      fs.writeFileSync(trackerPath, JSON.stringify(trackerData, null, 2));
 
       // Finalize the PDF
       doc.end();

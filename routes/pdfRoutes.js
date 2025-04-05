@@ -8,8 +8,8 @@ router.get("/", (req, res) => {
 });
 
 // PDF generation route
-router.get("/generate-payment-confirmation", (req, res) => {
-  PDFGenerator.generatePaymentConfirmation(res);
+router.post("/generate-payment-confirmation", (req, res) => {
+  PDFGenerator.generatePaymentConfirmation(req, res);
 });
 
 module.exports = router;
