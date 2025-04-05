@@ -77,28 +77,33 @@ class PDFGenerator {
   }
 
   static addHeader(doc, invoiceNumber) {
-    // Add header text instead of SVG
+    // Add header text
     doc.fontSize(48).font("Helvetica-Bold").text("INVOICE", 50, 50);
 
+    // Add StrikeRealty company name in red at the top right
     doc
-      .fontSize(48)
+      .fontSize(30)
       .fillColor("#b01e23") // Red color matching the original SVG
-      .text("Strike Realty", 250, 50);
+      .text("StrikeRealty", 350, 50); // x: 400 pixels from left, y: 50 pixels from top
 
-    // Add line
-    doc.moveTo(50, 130).lineTo(550, 130).stroke();
+    // Add company address under StrikeRealty
+    doc
+      .fontSize(10)
+      .text("13831 SW 50th St", 400, 85)
+      .text("Suite 201 Miami, FL 33183", 400, 100)
+      .text("(305) 330-2305", 400, 115);
 
-    // Add invoice details
+    // Add invoice details below INVOICE
     doc
       .fontSize(12)
       .fillColor("#B01E23")
-      .text("INVOICE", 50, 150)
+      .text("INVOICE", 50, 100)
       .fillColor("#000000")
-      .text(`#${invoiceNumber}`, 120, 150);
+      .text(`#${invoiceNumber}`, 120, 100);
 
     doc
       .fontSize(12)
-      .text("DATE:", 50, 170)
+      .text("DATE:", 50, 120)
       .text(
         new Date().toLocaleDateString("en-US", {
           month: "long",
@@ -106,29 +111,63 @@ class PDFGenerator {
           year: "numeric",
         }),
         120,
-        170
+        120
       );
   }
 
   static addBillingInfo(doc, data) {
-    // Bill From section
-    doc
-      .fontSize(12)
-      .fillColor("#B01E23")
-      .text("BILL FROM:", 50, 210)
-      .fillColor("#000000")
-      .font("Helvetica")
-      .text("Strike Realty LLC", 50, 230)
-      .text("13831 SW 59th St", 50, 245)
-      .text("Miami, FL 33183", 50, 260)
-      .text("(305) 330-2305", 50, 275);
+    const startY = 160;
+    const tableLeft = 50;
+    const tableWidth = 500;
+    const columnWidth = 250;
 
-    // Bill To section
+    // Add header row with red background
+    doc.fillColor("#B01E23").rect(tableLeft, startY, tableWidth, 25).fill();
+
+    // Add header text in white
     doc
-      .fillColor("#B01E23")
-      .text("BILL TO:", 300, 210)
+      .fillColor("#FFFFFF")
+      .fontSize(12)
+      .font("Helvetica-Bold")
+      .text("BILL FROM", tableLeft + 10, startY + 7)
+      .text("BILL TO", tableLeft + columnWidth + 10, startY + 7);
+
+    // Add content row
+    const contentY = startY + 25;
+    doc
       .fillColor("#000000")
-      .text(data.customerName, 300, 230);
+      .fontSize(10)
+      .font("Helvetica")
+      .text(
+        "Strike Realty LLC\n13831 SW 59th St\nMiami, FL 33183\n(305) 330-2305",
+        tableLeft + 10,
+        contentY + 7
+      )
+      .text(data.customerName, tableLeft + columnWidth + 10, contentY + 7);
+
+    // Draw table borders
+    doc.strokeColor("#000000").lineWidth(1);
+
+    // Outer borders
+    doc
+      .moveTo(tableLeft, startY)
+      .lineTo(tableLeft + tableWidth, startY)
+      .lineTo(tableLeft + tableWidth, contentY + 60)
+      .lineTo(tableLeft, contentY + 60)
+      .lineTo(tableLeft, startY)
+      .stroke();
+
+    // Middle vertical line
+    doc
+      .moveTo(tableLeft + columnWidth, startY)
+      .lineTo(tableLeft + columnWidth, contentY + 60)
+      .stroke();
+
+    // Horizontal line after header
+    doc
+      .moveTo(tableLeft, startY + 25)
+      .lineTo(tableLeft + tableWidth, startY + 25)
+      .stroke();
   }
 
   static addItemsTableWithSummary(doc, data) {
