@@ -173,5 +173,55 @@
     "totalAmount": 3025,
     "invoiceNumber": "20126192",
     "paymentDate": "2025-04-05"
+  },
+  {
+    "customerName": "John Smith",
+    "items": [
+      {
+        "description": "Property Management Services",
+        "cost": 1500
+      },
+      {
+        "description": "Maintenance and Repairs",
+        "cost": 750
+      },
+      {
+        "description": "Maintenance and Repairs",
+        "cost": 750
+      },
+      {
+        "description": "Maintenance and Repairs",
+        "cost": 750
+      },
+      {
+        "description": "Maintenance and Repairs",
+        "cost": 750
+      },
+      {
+        "description": "Marketing and Advertising",
+        "cost": 500
+      }
+    ],
+    "amountPaid": 2750,
+    "grossAmount": 2750,
+    "managementFee": 275,
+    "totalAmount": 3025,
+    "invoiceNumber": "20126193",
+    "paymentDate": "2025-04-05"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 11.99
+      }
+    ],
+    "amountPaid": 32,
+    "grossAmount": 11.99,
+    "managementFee": 1.2,
+    "totalAmount": 13.19,
+    "invoiceNumber": "20126194",
+    "paymentDate": "2025-04-05"
   }
 ]
