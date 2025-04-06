@@ -64,14 +64,24 @@ class PDFGenerator {
 
   static addHeader(doc, invoiceNumber) {
     // Add header text
-    doc.fontSize(48).font("Helvetica-Bold").text("INVOICE", 50, 50);
+    doc.fontSize(35).font("Helvetica-Bold").text("INVOICE", 50, 50);
 
-    // Add StrikeRealty company name in red at the top right
+    // Add StrikeRealty company name in red at the top right with extra bold effect
+    doc.fontSize(30).fillColor("#b01e23").font("Helvetica-BoldOblique");
+
+    // Draw text multiple times with tiny offset for bolder appearance
+    doc.text("StrikeRealty", 350, 50);
+    doc.text("StrikeRealty", 350.5, 50);
+    doc.text("StrikeRealty", 350, 50.5);
+    doc.text("StrikeRealty", 350.5, 50.5);
+
+    // Add the white "eraser" effect line
     doc
-      .fontSize(30)
-      .fillColor("#b01e23") // Red color matching the original SVG
-      .font("Helvetica-Bold") // Added bold font
-      .text("StrikeRealty", 350, 50); // x: 400 pixels from left, y: 50 pixels from top
+      .strokeColor("#FFFFFF")
+      .lineWidth(1)
+      .moveTo(350, 70)
+      .lineTo(520, 70)
+      .stroke();
 
     // Add company address under StrikeRealty
     doc
@@ -86,13 +96,28 @@ class PDFGenerator {
     doc
       .fontSize(12)
       .fillColor("#B01E23")
+      .font("Helvetica-Bold")
       .text("INVOICE", 50, 100)
+      .fillColor("#000000");
+
+    // Add gray background for invoice number
+    doc
+      .fillColor("#F5F5F5")
+      .rect(120, 95, 100, 16)
+      .fill()
       .fillColor("#000000")
+      .font("Helvetica")
       .text(`#${invoiceNumber}`, 120, 100);
 
+    doc.fontSize(12).font("Helvetica-Bold").text("DATE:", 50, 120);
+
+    // Add gray background for date
     doc
-      .fontSize(12)
-      .text("DATE:", 50, 120)
+      .fillColor("#F5F5F5")
+      .rect(120, 115, 100, 16)
+      .fill()
+      .fillColor("#000000")
+      .font("Helvetica")
       .text(
         new Date().toLocaleDateString("en-US", {
           month: "long",
@@ -113,7 +138,7 @@ class PDFGenerator {
 
     // Add background for entire section
     doc
-      .fillColor("#EEEEEE") // Lighter gray color matching the image
+      .fillColor("#EEEEEE")
       .rect(tableLeft, startY, tableWidth, 25 + rowHeight)
       .fill();
 
@@ -121,7 +146,7 @@ class PDFGenerator {
     doc.fillColor("#B01E23").rect(tableLeft, startY, tableWidth, 25).fill();
 
     doc
-      .fillColor("#FFFFFF") // White text for header
+      .fillColor("#FFFFFF")
       .fontSize(12)
       .font("Helvetica-Bold")
       .text("BILL FROM", tableLeft + 10, startY + 7)
@@ -130,39 +155,16 @@ class PDFGenerator {
     // Add content row
     const contentY = startY + 25;
     doc
-      .fillColor("#000000") // Black text for content
-      .fontSize(10)
+      .fillColor("#000000")
+      .fontSize(11)
       .font("Helvetica")
       .text(
         "Strike Realty LLC\n13831 SW 59th St\nMiami, FL 33183\n(305) 330-2305",
         tableLeft + 10,
         contentY + 7
       )
+      .font("Helvetica-Bold")
       .text(data.customerName, tableLeft + columnWidth + 10, contentY + 7);
-
-    // Draw table borders
-    doc.strokeColor("#000000").lineWidth(1);
-
-    // Outer borders
-    doc
-      .moveTo(tableLeft, startY)
-      .lineTo(tableLeft + tableWidth, startY)
-      .lineTo(tableLeft + tableWidth, contentY + rowHeight)
-      .lineTo(tableLeft, contentY + rowHeight)
-      .lineTo(tableLeft, startY)
-      .stroke();
-
-    // Middle vertical line
-    doc
-      .moveTo(tableLeft + columnWidth, startY)
-      .lineTo(tableLeft + columnWidth, contentY + rowHeight)
-      .stroke();
-
-    // Horizontal line after header
-    doc
-      .moveTo(tableLeft, startY + 25)
-      .lineTo(tableLeft + tableWidth, startY + 25)
-      .stroke();
 
     // Store the end position of billing info for the separator line
     doc.billingEndY = startY + 25 + rowHeight;
