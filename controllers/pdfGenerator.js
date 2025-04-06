@@ -60,7 +60,7 @@ class PDFGenerator {
         message: error.message,
       });
     }
-}
+  }
 
   static addHeader(doc, invoiceNumber) {
     // Add header text
@@ -70,11 +70,14 @@ class PDFGenerator {
     doc
       .fontSize(30)
       .fillColor("#b01e23") // Red color matching the original SVG
+      .font("Helvetica-Bold") // Added bold font
       .text("StrikeRealty", 350, 50); // x: 400 pixels from left, y: 50 pixels from top
 
     // Add company address under StrikeRealty
     doc
       .fontSize(10)
+      .fillColor("#000000") // Changed to black color
+      .font("Helvetica") // Reset to regular font
       .text("13831 SW 50th St", 400, 85)
       .text("Suite 201 Miami, FL 33183", 400, 100)
       .text("(305) 330-2305", 400, 115);
@@ -106,13 +109,19 @@ class PDFGenerator {
     const tableLeft = 50;
     const tableWidth = 500;
     const columnWidth = 250;
+    const rowHeight = 60;
+
+    // Add background for entire section
+    doc
+      .fillColor("#EEEEEE") // Lighter gray color matching the image
+      .rect(tableLeft, startY, tableWidth, 25 + rowHeight)
+      .fill();
 
     // Add header row with red background
     doc.fillColor("#B01E23").rect(tableLeft, startY, tableWidth, 25).fill();
 
-    // Add header text in white
     doc
-      .fillColor("#FFFFFF")
+      .fillColor("#FFFFFF") // White text for header
       .fontSize(12)
       .font("Helvetica-Bold")
       .text("BILL FROM", tableLeft + 10, startY + 7)
@@ -121,7 +130,7 @@ class PDFGenerator {
     // Add content row
     const contentY = startY + 25;
     doc
-      .fillColor("#000000")
+      .fillColor("#000000") // Black text for content
       .fontSize(10)
       .font("Helvetica")
       .text(
@@ -138,15 +147,15 @@ class PDFGenerator {
     doc
       .moveTo(tableLeft, startY)
       .lineTo(tableLeft + tableWidth, startY)
-      .lineTo(tableLeft + tableWidth, contentY + 60)
-      .lineTo(tableLeft, contentY + 60)
+      .lineTo(tableLeft + tableWidth, contentY + rowHeight)
+      .lineTo(tableLeft, contentY + rowHeight)
       .lineTo(tableLeft, startY)
       .stroke();
 
     // Middle vertical line
     doc
       .moveTo(tableLeft + columnWidth, startY)
-      .lineTo(tableLeft + columnWidth, contentY + 60)
+      .lineTo(tableLeft + columnWidth, contentY + rowHeight)
       .stroke();
 
     // Horizontal line after header
@@ -154,6 +163,9 @@ class PDFGenerator {
       .moveTo(tableLeft, startY + 25)
       .lineTo(tableLeft + tableWidth, startY + 25)
       .stroke();
+
+    // Store the end position of billing info for the separator line
+    doc.billingEndY = startY + 25 + rowHeight;
   }
 
   static formatNumber(number) {
@@ -164,11 +176,12 @@ class PDFGenerator {
   }
 
   static addItemsTableWithSummary(doc, data) {
-    const startY = 310;
+    const startY = 270;
     const tableLeft = 50;
     const tableWidth = 500;
     const descriptionWidth = 380;
     const costWidth = 120;
+    const rowHeight = 20;
 
     // Add header
     doc.fillColor("#B01E23").rect(tableLeft, startY, tableWidth, 25).fill();
@@ -182,36 +195,62 @@ class PDFGenerator {
 
     let currentY = startY + 25;
 
-    // Add items
+    // Add items without horizontal lines
     data.items.forEach((item) => {
-      // Draw row border
-      doc
-        .strokeColor("#000000")
-        .lineWidth(0.5)
-        .moveTo(tableLeft, currentY)
-        .lineTo(tableLeft + tableWidth, currentY)
-        .stroke();
-
-      // Add item content
       doc
         .fillColor("#000000")
         .fontSize(10)
         .font("Helvetica")
-        .text(item.description, tableLeft + 10, currentY + 7)
+        .text(item.description, tableLeft + 10, currentY + 5)
         .text(
           `$${this.formatNumber(item.cost)}`,
           tableLeft + descriptionWidth + 10,
-          currentY + 7,
+          currentY + 5,
           {
             width: costWidth - 20,
             align: "right",
           }
         );
 
-      currentY += 25;
+      currentY += rowHeight;
     });
 
-    // Add summary rows
+    // Draw main table borders
+    doc.strokeColor("#000000").lineWidth(1);
+
+    // Left border
+    doc.moveTo(tableLeft, startY).lineTo(tableLeft, currentY).stroke();
+
+    // Right border
+    doc
+      .moveTo(tableLeft + tableWidth, startY)
+      .lineTo(tableLeft + tableWidth, currentY)
+      .stroke();
+
+    // Column separator
+    doc
+      .moveTo(tableLeft + descriptionWidth, startY)
+      .lineTo(tableLeft + descriptionWidth, currentY)
+      .stroke();
+
+    // Bottom border for main items table
+    doc
+      .moveTo(tableLeft, currentY)
+      .lineTo(tableLeft + tableWidth, currentY)
+      .stroke();
+
+    // Calculate middle point between billing info and table
+    const separatorY = doc.billingEndY + (startY - doc.billingEndY) / 2;
+
+    // Add separator line between billing info and table
+    doc
+      .strokeColor("#000000")
+      .lineWidth(1)
+      .moveTo(tableLeft, separatorY)
+      .lineTo(tableLeft + tableWidth, separatorY)
+      .stroke();
+
+    // Add summary rows with adjusted spacing
     const summaryData = [
       {
         label: "GROSS AMOUNT",
@@ -250,25 +289,34 @@ class PDFGenerator {
       },
     ];
 
-    summaryData.forEach((row) => {
+    summaryData.forEach((row, index) => {
       // Draw row border
       doc
         .strokeColor("#000000")
         .lineWidth(0.5)
-        .moveTo(tableLeft, currentY)
+        .moveTo(tableLeft + descriptionWidth, currentY)
         .lineTo(tableLeft + tableWidth, currentY)
         .stroke();
 
-      // Calculate positions for right-aligned text
-      const labelX = tableLeft + descriptionWidth - 10;
-      const valueX = tableLeft + descriptionWidth;
+      // Draw left border for amount column
+      if (index === 0) {
+        doc
+          .strokeColor("#000000")
+          .lineWidth(1)
+          .moveTo(tableLeft + descriptionWidth, currentY)
+          .lineTo(
+            tableLeft + descriptionWidth,
+            currentY + summaryData.length * rowHeight
+          )
+          .stroke();
+      }
 
       // Add label (always bold, right-aligned in description column)
       doc
         .fillColor(row.isRed ? "#B01E23" : "#000000")
         .fontSize(10)
         .font("Helvetica-Bold")
-        .text(row.label, tableLeft + 10, currentY + 7, {
+        .text(row.label, tableLeft + 10, currentY + 5, {
           width: descriptionWidth - 20,
           align: "right",
         });
@@ -276,35 +324,31 @@ class PDFGenerator {
       // Add value (bold only for totals, right-aligned in cost column)
       doc
         .font(row.boldValue ? "Helvetica-Bold" : "Helvetica")
-        .text(`$${this.formatNumber(row.value)}`, valueX + 10, currentY + 7, {
-          width: costWidth - 20,
-          align: "right",
-        });
+        .text(
+          `$${this.formatNumber(row.value)}`,
+          tableLeft + descriptionWidth + 10,
+          currentY + 5,
+          {
+            width: costWidth - 20,
+            align: "right",
+          }
+        );
 
-      currentY += 25;
+      currentY += rowHeight;
     });
 
-    // Draw table borders
+    // Draw final borders for summary section
     doc.strokeColor("#000000").lineWidth(1);
-
-    // Left border
-    doc.moveTo(tableLeft, startY).lineTo(tableLeft, currentY).stroke();
 
     // Right border
     doc
-      .moveTo(tableLeft + tableWidth, startY)
+      .moveTo(tableLeft + tableWidth, currentY - summaryData.length * rowHeight)
       .lineTo(tableLeft + tableWidth, currentY)
-      .stroke();
-
-    // Vertical line between description and cost
-    doc
-      .moveTo(tableLeft + descriptionWidth, startY)
-      .lineTo(tableLeft + descriptionWidth, currentY)
       .stroke();
 
     // Bottom border
     doc
-      .moveTo(tableLeft, currentY)
+      .moveTo(tableLeft + descriptionWidth, currentY)
       .lineTo(tableLeft + tableWidth, currentY)
       .stroke();
 
@@ -313,96 +357,58 @@ class PDFGenerator {
   }
 
   static addPaymentMethod(doc, startY) {
-    const startX = 50;
-    const sectionWidth = 500;
-    const sectionHeight = 120;
-    const pageHeight = doc.page.height - 50; // Account for margin
+    const sectionWidth = 350;
+    const sectionHeight = 100;
+    const pageHeight = doc.page.height - 50;
+    const bottomPadding = 50;
+    const newPageTopMargin = 30;
+    const contentPadding = 25;
 
     // Check if payment section will fit on current page
-    if (startY + sectionHeight > pageHeight) {
-      doc.addPage(); // Add new page if it won't fit
-      startY = 50; // Reset startY to top of new page with margin
+    if (startY + sectionHeight + bottomPadding > pageHeight) {
+      doc.addPage();
+      startY = newPageTopMargin;
     }
 
-    // Add light red background with rounded corners
+    // Add light gray background
     doc
-      .fillColor("#fde8e8")
-      .roundedRect(startX, startY, sectionWidth, sectionHeight, 8)
+      .fillColor("#F5F5F5")
+      .rect(0, startY, sectionWidth, sectionHeight)
       .fill();
-
-    // Add border
-    doc
-      .strokeColor("#B01E23")
-      .lineWidth(0.5)
-      .roundedRect(startX, startY, sectionWidth, sectionHeight, 8)
-      .stroke();
-
-    // Add all content in one continuous block to prevent page breaks
-    doc.save(); // Save the current graphics state
-    doc.rect(startX, startY, sectionWidth, sectionHeight).clip(); // Clip to payment section
 
     // Add title
     doc
-      .fontSize(14)
+      .fontSize(12)
       .fillColor("#B01E23")
       .font("Helvetica-Bold")
-      .text("Payment Methods", startX + 15, startY + 15);
+      .text("Payment Methods", contentPadding, startY + 15);
 
-    // Add payment options with better spacing
-    const leftMargin = startX + 20;
-    let currentY = startY + 45;
-
-    // Bank Deposits section
-    doc
-      .fontSize(11)
-      .fillColor("#B01E23")
-      .font("Helvetica-Bold")
-      .text("Bank Deposits:", leftMargin, currentY);
-
-    currentY += 20;
+    // Bank deposit info
     doc
       .fontSize(10)
       .fillColor("#000000")
-      .font("Helvetica")
-      .text("Regions Bank • Wells Fargo", leftMargin, currentY);
-
-    // Online Payments section
-    currentY += 25;
-    doc
-      .fontSize(11)
-      .fillColor("#B01E23")
       .font("Helvetica-Bold")
-      .text("Online Payments:", leftMargin, currentY);
-
-    currentY += 20;
-    doc
-      .fontSize(10)
-      .fillColor("#000000")
+      .text("Bank for Walk-in Deposit:", contentPadding, startY + 35, {
+        continued: true,
+      })
       .font("Helvetica")
-      .text(
-        "ACH Transfer • Zelle • Credit Card (with fee)",
-        leftMargin,
-        currentY,
-        {
-          continued: true, // Keep text together
-        }
-      );
+      .text(" Regions Bank, Wells Fargo");
 
-    // Add note about account number at the bottom with proper spacing
+    // Account number info
     doc
-      .fontSize(9)
-      .fillColor("#666666")
-      .font("Helvetica-Oblique")
-      .text(
-        "Account numbers available upon request",
-        leftMargin,
-        startY + sectionHeight - 25,
-        {
-          continued: true, // Keep text together
-        }
-      );
+      .font("Helvetica-Bold")
+      .text("Account Number:", contentPadding, startY + 50, { continued: true })
+      .font("Helvetica")
+      .text(" Upon Request");
 
-    doc.restore(); // Restore the graphics state
+    // Online payments info
+    doc
+      .font("Helvetica-Bold")
+      .text("Online Payments Accepted:", contentPadding, startY + 65, {
+        continued: true,
+      })
+      .font("Helvetica")
+      .text(" ACH, Zelle, Credit Card (with fee)");
   }
 
   static addFooter(doc) {

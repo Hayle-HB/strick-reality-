@@ -572,5 +572,1946 @@
     "totalAmount": 275,
     "invoiceNumber": "20126209",
     "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126210",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126211",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126212",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126213",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126214",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126215",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 700,
+    "managementFee": 70,
+    "totalAmount": 770,
+    "invoiceNumber": "20126216",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126217",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126218",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1300,
+    "managementFee": 130,
+    "totalAmount": 1430,
+    "invoiceNumber": "20126219",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1325,
+    "managementFee": 132.5,
+    "totalAmount": 1457.5,
+    "invoiceNumber": "20126220",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126221",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126222",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126223",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126224",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126225",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126226",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126227",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 650,
+    "managementFee": 65,
+    "totalAmount": 715,
+    "invoiceNumber": "20126228",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126229",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126230",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      },
+      {
+        "description": "12",
+        "cost": 23
+      },
+      {
+        "description": "a;sdkjf",
+        "cost": 32
+      },
+      {
+        "description": "dkjahflk",
+        "cost": 23
+      },
+      {
+        "description": "a;lskdjf",
+        "cost": 43
+      },
+      {
+        "description": "alskdjfl",
+        "cost": 53.98
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1874.98,
+    "managementFee": 187.5,
+    "totalAmount": 2062.48,
+    "invoiceNumber": "20126231",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 124.99
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      },
+      {
+        "description": "Property Inspection",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 2824.99,
+    "managementFee": 282.5,
+    "totalAmount": 3107.49,
+    "invoiceNumber": "20126232",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126233",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126234",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126235",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126236",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126237",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126238",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 800,
+    "managementFee": 80,
+    "totalAmount": 880,
+    "invoiceNumber": "20126239",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126240",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126241",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126242",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126243",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126244",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126245",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126246",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126247",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126248",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126249",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1050,
+    "managementFee": 105,
+    "totalAmount": 1155,
+    "invoiceNumber": "20126250",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126251",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126252",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126253",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126254",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126255",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126256",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126257",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126258",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126259",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126260",
+    "paymentDate": "2025-04-06"
   }
 ]
