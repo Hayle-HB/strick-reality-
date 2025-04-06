@@ -46,7 +46,6 @@ class PDFGenerator {
       this.addHeader(doc, nextInvoiceNumber);
       this.addBillingInfo(doc, req.body);
       this.addItemsTableWithSummary(doc, req.body);
-      this.addPaymentMethod(doc);
       this.addFooter(doc);
 
       // Save updated tracker data
@@ -157,6 +156,13 @@ class PDFGenerator {
       .stroke();
   }
 
+  static formatNumber(number) {
+    return new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(number);
+  }
+
   static addItemsTableWithSummary(doc, data) {
     const startY = 310;
     const tableLeft = 50;
@@ -193,7 +199,7 @@ class PDFGenerator {
         .font("Helvetica")
         .text(item.description, tableLeft + 10, currentY + 7)
         .text(
-          `$${item.cost.toFixed(2)}`,
+          `$${this.formatNumber(item.cost)}`,
           tableLeft + descriptionWidth + 10,
           currentY + 7,
           {
@@ -270,7 +276,7 @@ class PDFGenerator {
       // Add value (bold only for totals, right-aligned in cost column)
       doc
         .font(row.boldValue ? "Helvetica-Bold" : "Helvetica")
-        .text(`$${row.value.toFixed(2)}`, valueX + 10, currentY + 7, {
+        .text(`$${this.formatNumber(row.value)}`, valueX + 10, currentY + 7, {
           width: costWidth - 20,
           align: "right",
         });
@@ -301,18 +307,102 @@ class PDFGenerator {
       .moveTo(tableLeft, currentY)
       .lineTo(tableLeft + tableWidth, currentY)
       .stroke();
+
+    // Add payment methods section with 30px spacing from table
+    this.addPaymentMethod(doc, currentY + 30);
   }
 
-  static addPaymentMethod(doc) {
+  static addPaymentMethod(doc, startY) {
+    const startX = 50;
+    const sectionWidth = 500;
+    const sectionHeight = 120;
+    const pageHeight = doc.page.height - 50; // Account for margin
+
+    // Check if payment section will fit on current page
+    if (startY + sectionHeight > pageHeight) {
+      doc.addPage(); // Add new page if it won't fit
+      startY = 50; // Reset startY to top of new page with margin
+    }
+
+    // Add light red background with rounded corners
     doc
-      .fontSize(12)
+      .fillColor("#fde8e8")
+      .roundedRect(startX, startY, sectionWidth, sectionHeight, 8)
+      .fill();
+
+    // Add border
+    doc
+      .strokeColor("#B01E23")
+      .lineWidth(0.5)
+      .roundedRect(startX, startY, sectionWidth, sectionHeight, 8)
+      .stroke();
+
+    // Add all content in one continuous block to prevent page breaks
+    doc.save(); // Save the current graphics state
+    doc.rect(startX, startY, sectionWidth, sectionHeight).clip(); // Clip to payment section
+
+    // Add title
+    doc
+      .fontSize(14)
       .fillColor("#B01E23")
       .font("Helvetica-Bold")
-      .text("PAYMENT METHOD", 50, 650)
+      .text("Payment Methods", startX + 15, startY + 15);
+
+    // Add payment options with better spacing
+    const leftMargin = startX + 20;
+    let currentY = startY + 45;
+
+    // Bank Deposits section
+    doc
+      .fontSize(11)
+      .fillColor("#B01E23")
+      .font("Helvetica-Bold")
+      .text("Bank Deposits:", leftMargin, currentY);
+
+    currentY += 20;
+    doc
+      .fontSize(10)
       .fillColor("#000000")
       .font("Helvetica")
-      .text("Bank Name: Regions Bank–Wells Fargo–Zelle", 50, 670)
-      .text("Account Number: Upon Request", 50, 685);
+      .text("Regions Bank • Wells Fargo", leftMargin, currentY);
+
+    // Online Payments section
+    currentY += 25;
+    doc
+      .fontSize(11)
+      .fillColor("#B01E23")
+      .font("Helvetica-Bold")
+      .text("Online Payments:", leftMargin, currentY);
+
+    currentY += 20;
+    doc
+      .fontSize(10)
+      .fillColor("#000000")
+      .font("Helvetica")
+      .text(
+        "ACH Transfer • Zelle • Credit Card (with fee)",
+        leftMargin,
+        currentY,
+        {
+          continued: true, // Keep text together
+        }
+      );
+
+    // Add note about account number at the bottom with proper spacing
+    doc
+      .fontSize(9)
+      .fillColor("#666666")
+      .font("Helvetica-Oblique")
+      .text(
+        "Account numbers available upon request",
+        leftMargin,
+        startY + sectionHeight - 25,
+        {
+          continued: true, // Keep text together
+        }
+      );
+
+    doc.restore(); // Restore the graphics state
   }
 
   static addFooter(doc) {

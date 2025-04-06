@@ -223,5 +223,281 @@
     "totalAmount": 13.19,
     "invoiceNumber": "20126194",
     "paymentDate": "2025-04-05"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 89
+      }
+    ],
+    "amountPaid": 9,
+    "grossAmount": 89,
+    "managementFee": 8.9,
+    "totalAmount": 97.9,
+    "invoiceNumber": "20126195",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "I want to buy something best",
+        "cost": 31.98
+      },
+      {
+        "description": "alksdjfh",
+        "cost": 42.93
+      },
+      {
+        "description": "alksjdfh",
+        "cost": 54
+      },
+      {
+        "description": "dalksjdhf;asd",
+        "cost": 22.99
+      }
+    ],
+    "amountPaid": 11.86,
+    "grossAmount": 151.9,
+    "managementFee": 15.19,
+    "totalAmount": 167.09,
+    "invoiceNumber": "20126196",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 38373746.98
+      }
+    ],
+    "amountPaid": 2383898383,
+    "grossAmount": 38373746.98,
+    "managementFee": 3837374.7,
+    "totalAmount": 42211121.68,
+    "invoiceNumber": "20126197",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 347383837482.99
+      }
+    ],
+    "amountPaid": 33833883,
+    "grossAmount": 347383837482.99,
+    "managementFee": 34738383748.3,
+    "totalAmount": 382122221231.29,
+    "invoiceNumber": "20126198",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 77.99
+      }
+    ],
+    "amountPaid": 78,
+    "grossAmount": 77.99,
+    "managementFee": 7.8,
+    "totalAmount": 85.79,
+    "invoiceNumber": "20126199",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 787
+      }
+    ],
+    "amountPaid": 78.01,
+    "grossAmount": 787,
+    "managementFee": 78.7,
+    "totalAmount": 865.7,
+    "invoiceNumber": "20126200",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 67
+      }
+    ],
+    "amountPaid": 323728378,
+    "grossAmount": 67,
+    "managementFee": 6.7,
+    "totalAmount": 73.7,
+    "invoiceNumber": "20126201",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "Haylemeskel Haylemariam",
+    "items": [
+      {
+        "description": "this is me",
+        "cost": 78
+      }
+    ],
+    "amountPaid": 78877887,
+    "grossAmount": 78,
+    "managementFee": 7.8,
+    "totalAmount": 85.8,
+    "invoiceNumber": "20126202",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      }
+    ],
+    "amountPaid": 275,
+    "grossAmount": 250,
+    "managementFee": 25,
+    "totalAmount": 275,
+    "invoiceNumber": "20126203",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126204",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126205",
+    "paymentDate": "2025-04-06"
+  },
+  {
+    "customerName": "John Doe",
+    "items": [
+      {
+        "description": "Property Inspection",
+        "cost": 250
+      },
+      {
+        "description": "Property Photos",
+        "cost": 150
+      },
+      {
+        "description": "Market Analysis",
+        "cost": 300
+      },
+      {
+        "description": "Virtual Tour",
+        "cost": 200
+      },
+      {
+        "description": "Marketing Materials",
+        "cost": 175
+      },
+      {
+        "description": "Document Preparation",
+        "cost": 225
+      },
+      {
+        "description": "Consultation Fee",
+        "cost": 275
+      },
+      {
+        "description": "Administrative Fee",
+        "cost": 125
+      }
+    ],
+    "amountPaid": 1870,
+    "grossAmount": 1700,
+    "managementFee": 170,
+    "totalAmount": 1870,
+    "invoiceNumber": "20126206",
+    "paymentDate": "2025-04-06"
   }
 ]
