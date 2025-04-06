@@ -60,7 +60,7 @@ class PDFGenerator {
         message: error.message,
       });
     }
-  }
+}
 
   static addHeader(doc, invoiceNumber) {
     // Add header text
