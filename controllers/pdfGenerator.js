@@ -260,6 +260,7 @@ class PDFGenerator {
         align: "right",
         isRed: false,
         boldValue: false,
+        prefix: "$",
       },
       {
         label: "PROJECT MANAGEMENT FEE (10%)",
@@ -267,6 +268,7 @@ class PDFGenerator {
         align: "right",
         isRed: false,
         boldValue: false,
+        prefix: "+ $",
       },
       {
         label: "TOTAL",
@@ -274,6 +276,7 @@ class PDFGenerator {
         align: "right",
         isRed: false,
         boldValue: true,
+        prefix: "$",
       },
       {
         label: "PAID",
@@ -281,6 +284,7 @@ class PDFGenerator {
         align: "right",
         isRed: false,
         boldValue: false,
+        prefix: "- $",
       },
       {
         label: "TOTAL",
@@ -288,6 +292,7 @@ class PDFGenerator {
         align: "right",
         isRed: true,
         boldValue: true,
+        prefix: "$",
       },
     ];
 
@@ -313,7 +318,7 @@ class PDFGenerator {
           .stroke();
       }
 
-      // Add label (always bold, right-aligned in description column)
+      // Add label
       doc
         .fillColor(row.isRed ? "#B01E23" : "#000000")
         .fontSize(10)
@@ -323,11 +328,11 @@ class PDFGenerator {
           align: "right",
         });
 
-      // Add value (bold only for totals, right-aligned in cost column)
+      // Add value with prefix
       doc
         .font(row.boldValue ? "Helvetica-Bold" : "Helvetica")
         .text(
-          `$${this.formatNumber(row.value)}`,
+          `${row.prefix}${this.formatNumber(row.value)}`,
           tableLeft + descriptionWidth + 10,
           currentY + 5,
           {
